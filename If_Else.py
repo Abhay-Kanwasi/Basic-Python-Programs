@@ -67,12 +67,27 @@ raining = str.lower(raining)
 
 #18 Ask the user to enter a number, If it is under 10, display the message "Too low", if their number is between 10 and 20, display "Correct", otherwise display "Too high".
 
-num = int(input("Enter a number :"))
-if num <= 10:
-    print("Too low")
-    if num >= 10 and num <= 20:
-        print("Correct")
-else:
-    print("Too high")
+# num = int(input("Enter a number :"))
+# if num <= 10:
+#     print("Too low")
+#     if num >= 10 and num <= 20:
+#         print("Correct")
+# else:
+#     print("Too high")
+
+
+#19 Ask the user to enter 1, 2 or 3. If they enter a 1, display the message “Thank you”, if they enter a 2, display “Well done”, if they enter a 3, display “Correct”. If they enter anything else, display “Error message”.
+
+# num = int(input("Choose a number : 1 , 2 , 3 : "))
+# if num == 1:
+#     print("Thank You!")
+#     if num == 2: 
+#         print("Well done !")
+#         if num == 3:
+#             print("Correct !")
+# else:
+#     print("Error message !!!")
+
+
 
 
