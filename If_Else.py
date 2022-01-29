@@ -40,8 +40,8 @@
 
 #16 Ask the user if it is raining and convert their ansewer to lower case so it doesnt't matter what case they type it in. If they answer "Yes" ask if it is windy. If they answer "yes" to this second question, display the answer "It is too windy for an umberella", otherwise display the message "Take an umberella", If they did not answer yes to the first question, display the answer "Enjoy your day"
 
-raining = input("Is it raining today :")
-raining = str.lower(raining)
+# raining = input("Is it raining today :")
+# raining = str.lower(raining)
  #for convert the answer into lower case
 # if raining == "yes":
 #     windy = input("Is it windy? ")
