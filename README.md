@@ -296,5 +296,109 @@ Picks a random value from the options “red”, “black” or “green” and 
 variable “colour”. Remember: strings need to include speech marks but numeric data
 does not.
 
+# Turtle Graphics
+For this I created turtle.py
+
+It is possible to draw using a turtle in Python. By typing in commands
+and using loops, you can create intricate patterns. Here is how it works.
+A turtle will travel along a path that you define, leaving a pen mark behind it. As you control
+the turtle, the pattern that is left is revealed. To draw the pentagon shown below you would
+type in the following code.
+
+import turtle
+
+turtle.shape("turtle")
+for i in range(0,5):
+ turtle.forward(100)
+ turtle.right(72)
+turtle.exitonclick()
+
+By combining these simple shapes and using nested loops (i.e. loops inside other loops)
+it is possible to create beautiful patterns very easily.
+
+`import turtle`
+This line needs to be included
+at the beginning of your
+program to import the turtle
+library into Python, allowing
+you to use the turtle functions.
+
+`scr = turtle.Screen()`
+Defines the window as being
+called “scr”. This means we can
+use the shorthand “scr”, rather
+than having to refer to the window
+by its full name each time.
+
+`scr.bgcolor(“yellow”)`
+Sets the screen background
+colour to yellow. By default, the
+background colour will be
+white unless it is changed.
+
+`turtle.pensize(3)`
+Changes the turtle pen size
+(the thickness of the line that is
+drawn) to 3. By default, this is 1
+unless it is changed.
+
+`turtle.penup()`
+Removes the pen from
+the page so that as the
+turtle moves it does not
+leave a trail behind it.
+
+`turtle.pendown()`
+Places the pen on the
+page so that when the
+turtle moves it will
+leave a trail behind it.
+By default, the pen is
+down unless specified
+otherwise.
+
+`turtle.forward(50)`
+Moves the turtle forward 50
+steps.
+
+`turtle.left(120)`
+Turns the turtle 120° to
+the left (counter
+clockwise). turtle.right(90)
+Turns the turtle 90° to
+the right (clockwise).
+
+`turtle.showturtle()`
+Shows the turtle on the screen.
+By default, the turtle is
+showing unless specified
+otherwise.
+
+`turtle.hideturtle()`
+Hides the turtle so it is not
+showing on the screen.
+
+`turtle.shape(“turtle”)`
+Changes the shape of the turtle to look like a turtle
+. By default, the turtle will look like a small arrow.
+
+`turtle.exitonclick()`
+When the user clicks on the
+turtle window it will
+automatically close.
+
+`turtle.begin_fill()`
+Entered before the code that draws a shape so it
+knows to fill in the shape it is drawing.
+
+`turtle.end_fill()`
+Entered after the code that is drawing the shape to
+tell Python to stop filling in the shape.
+
+`turtle.color(“black”,“red”)`
+Defines the colours filling in the shape. This
+example will make the shape have a black outline
+and a red fill. This needs to be entered before the
+shape is drawn.
 
 
