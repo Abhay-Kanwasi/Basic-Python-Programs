@@ -401,4 +401,109 @@ example will make the shape have a black outline
 and a red fill. This needs to be entered before the
 shape is drawn.
 
+# Dictionaries
+
+So far, we have used variables that can store a single item of data in them. When you used
+the random.choice([“red”,“blue”,“green”]) line of code you are picking a
+random item from a list of possible options. This demonstrates that one item can hold
+several pieces of separate data, in this case a collection of colours.
+There are several ways that collections of data can be stored as a
+single item. Three of the simpler ones are:
+1. tuples
+2. lists
+3. dictionaries
+
+`Tuples`
+
+Once a tuple is defined you cannot change what is stored in it. This means that when you
+write the program you must state what the data is that is being stored in the tuple and the
+data cannot be altered while the program is running. Tuples are usually used for menu
+items that would not need to be changed.
+
+`Lists`
+
+The contents of a list can be changed while the program is running and lists are one of
+the most common ways to store a collection of data under one variable name in Python. The
+data in a list does not all have to be of the same data type. For example, the same list can
+store both strings and integers; however, this can cause problems later and is therefore not
+recommended.
+
+`Dictionaries`
+
+The contents of a dictionary can also be changed while the program is running. Each
+value is given an index or key you can define to help identify each piece of data. This index
+will not change if other rows of data are added or deleted, unlike lists where the position of
+the items can change and therefore their index number will also change.
+
+Some things we used in dictionaries.py
+
+`fruit_tuple = (“apple”,“banana”,“strawberry”,“orange”)`
+
+Creates a variable name called “fruit_tuple” which stores four pieces of fruit within it. The
+round brackets define this group as a tuple and therefore the contents of this collection of
+data cannot be altered while the program is running.
+
+`print(fruit_tuple.index(“strawberry”))`
+
+Displays the index (i.e. the numeric key) of the item “strawberry”. In this example it
+will return the number 2 as Python starts counting the items from 0, not 1.
+
+`print(fruit_tuple[2])`
+
+Displays item 2 from
+“fruit_tuple”, in this case
+“strawberry”.
+
+`names_list = [“John”,“Tim”,“Sam”]`
+
+Creates a list of the names and stores them in the
+variable “names_list”. The square brackets define
+this group of data as a list and therefore the contents
+can be altered while the program is running.
+
+`names_list.append(input(“Add a name: “))`
+
+Asks the user to enter a name and will add that to the end of
+“names_list”.
+del names_list[1]
+Deletes item 1 from
+“names_list”. Remember
+it starts counting from 0
+and not 1. In this case it
+will delete “Tim” from the
+list.
+
+`print(sorted(names_list))`
+
+Displays names_list in alphabetical
+order but does not change the order of
+the original list, which is still saved in
+the original order. This does not work
+if the list is storing data of different
+types, such as strings and numeric
+data in the same list.
+
+`names_list.sort()`
+
+Sorts name_list into
+alphabetical order and
+saves the list in the new
+order. This does not work
+if the list is storing data of
+different types, such as
+strings and numeric data
+in the same list.
+
+`colours = {1:“red”,2:“blue”,3:“green”}`
+
+Creates a dictionary called “colours”, where each item is
+assigned an index of your choosing. The first item in each
+block is the index, separated by a colon and then the
+colour.
+
+`colours[2] = “yellow”`
+
+Makes a change to the data stored in position 2 of the colours dictionary. In this case it will
+change “blue” to “yellow”.
+
 
