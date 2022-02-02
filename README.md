@@ -506,4 +506,66 @@ colour.
 Makes a change to the data stored in position 2 of the colours dictionary. In this case it will
 change “blue” to “yellow”.
 
+`x = [154,634,892,345,341,43]`
+
+Here we have created a list that contains
+numbers. Please note: as it contains numeric
+data, no speech marks are required.
+
+`print(x[1:4])`
+
+This will display data in positions 1, 2 and 3. In
+this case 634, 892 and 345. Remember, Python
+starts counting from 0 and will stop when it gets
+to the last position, without showing the final
+value.
+
+`print(len(x))`
+
+Displays the length of the list
+(i.e. how many items are in the
+list).
+num = int(input(“Enter number: ”))
+if num in x:
+print(num,“is in the list”)
+else:
+print(“Not in the list”)
+Asks the user to enter a number and checks
+whether the number is in the list and displays an
+appropriate message.
+
+`for i in x:
+print(i)`
+
+Uses the items in the list in a for
+loop, useful if you want to print
+the items in a list on separate
+lines.
+
+`x.insert(2,420)`
+
+Inserts the number
+420 into position 2 and
+pushes everything
+else along to make
+space. This will
+change the index
+numbers of the items
+in the list.
+
+`x.remove(892)`
+
+Deletes an item from
+the list. This is useful
+if you do not know the
+index of that item. If
+there is more than one
+instance of the data it
+will only delete the
+first instance.
+
+`x.append(993)`
+
+Adds the number 993 to the end of the list.
+
 
