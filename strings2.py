@@ -28,12 +28,58 @@
 # 83 Ask the user to type in a word in uppercase.If they type it in lower case, ask them to try again. Keep repeating this until they type in a msessage all in uppercase.
 
 
-uname = input("Enter your name in capital : ")
-tryagain = False
-while tryagain == False:
-    if uname.isupper():
-        print("Thank you")
-        tryagain = True
-    else:
-        print("Try again")
-        uname = input("Enter a message in uppercase: ")
+# uname = input("Enter your name in capital : ")
+# tryagain = False
+# while tryagain == False:
+#     if uname.isupper():
+#         print("Thank you")
+#         tryagain = True
+#     else:
+#         print("Try again")
+#         uname = input("Enter a message in uppercase: ")
+
+
+# 84 Ask the user to type in their postcode. Display the first two letters in uppercase.
+
+# postcode = input("Enter the postcode :")
+# start = postcode[0:2]
+# print(start.upper())
+
+
+# 85 Ask the user to type in their name and then tell them how many vowels are in their name.
+
+# count = 0
+# name = input("Enter your name: ")
+# name = name.lower()
+# for x in name:
+#     if x == "a" or x == "e" or x == "i" or x == "o" or x == "u":
+#         count = count + 1
+# print(count,"vowels in the name.")
+
+
+# 86 Ask the user to enter a new password. Ask them to enter again. If the two passwords match, display "Thank you", If the letters are correct but in the wrongcase, display the message "They must be in the same", otherwise display the message "Incorrect".
+
+# new = input("Enter a password :")
+# confirm = input("Enter the password :")
+# if new == confirm:
+#     print("Thank you !")
+# elif new.lower() != confirm.lower():
+#         print("They must be in the same.")
+# elif new.capitalize != confirm.capitalize:
+#             print("They must be in the same.")
+# else:
+#     print("Incorrect!")
+
+
+
+# 87 Ask the user to type in a word and then display it backwards on seperate lines. For instance, if they in "Hello" it should display the opposite word "olleH" one word at a line.
+
+# word = input("Enter a word :")
+# length = len(word)
+# num = 1
+# for x in word:
+#     position = length - num
+#     letter = word[position]
+#     print(letter)
+#     num = num + 1
+
