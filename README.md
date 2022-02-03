@@ -1,11 +1,16 @@
 # Python-Basic-Program-Challenge-Series
 In this series i cover each topics with various easy examples for every concept i create seprate file 
 
-#for basics
+## Note
+
+### Please use wrap text in all the .py files when you open it in VS Code if you want to avoid the unnecessary question following. 
+
+# basics
 Python is case sensitive so it is important that you use the correct case, otherwise
 your code will not work.
 Text values need to appear in speech marks (") but numbers do
 not.
+
 When naming variables (i.e. values that you want to store
 data in) you cannot use any dedicated words such as print,
 input, etc. otherwise your code will not work.
