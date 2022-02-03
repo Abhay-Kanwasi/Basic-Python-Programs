@@ -569,3 +569,40 @@ first instance.
 Adds the number 993 to the end of the list.
 
 
+# String Manipulation
+
+Explanation
+A string is the technical name for a group of characters that you do not need to perform
+calculations with. “Hello” would be an example of a string, as would “7B”.
+Here we have a variable called name which is assigned the value “Simon”.
+
+### Example which we used in string2.py
+
+Please note: in the examples below, “msg” is a variable name containing a string.
+
+`First one`
+if msg.isupper():
+print(“Uppercase”)
+else:
+print(“This is not in uppercase”)
+If the message is in uppercase it will display the message
+“Uppercase”, otherwise it will display the message “This
+is not in uppercase”.
+
+`Second one`
+msg.islower()
+Can be used in place of
+the isupper () function
+to check if the variable
+contains lower case
+letters.
+
+`Third one`
+msg=”Hello”
+for letter in msg:
+print(letter,end=”*”)
+Displays the message, and between each character it will display a “*”.
+The output in this example will be: H*e*l*l*o*
+
+
+
