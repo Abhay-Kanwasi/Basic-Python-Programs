@@ -605,4 +605,105 @@ Displays the message, and between each character it will display a “*”.
 The output in this example will be: H*e*l*l*o*
 
 
+# Numeric Arrays
 
+Lists can store a jumble of different types
+of data at the same time, including strings and numbers. Python arrays are similar to
+lists, but they are only used to store numbers. Numbers can have varying ranges, but
+in an array all pieces of data in that array must have the same data type.
+
+`Integer`
+Whole number between -32,768 and 32,767 
+size = 2bytes
+
+`Long`
+Whole number between -2,147,483,648 and 2,147,483,647 
+size = 4bytes
+
+`Floating-point`
+Allows decimal places with numbers ranging
+from -1038 to 1038 (i.e. allows up to 38 numeric
+characters including a single decimal point
+anywhere in that number and can be negative or
+positive value)
+size = 4bytes
+
+`Double`
+Allows decimal places with numbers ranging
+from -10308 to 10308.
+size = 8bytes
+
+When you create your array you need to define the type of data it will contain. You cannot
+alter or change this while the program is running. Therefore, if you define an array as an 'i'
+type (this allows whole numbers between the values −32,768 and 32,767) you cannot add a
+decimal point to a number in that array later as it will cause an error message and crash the
+program.
+
+### Please note:
+Other programming languages use the term array to
+allow the storage of any data type, but in Python arrays only store numbers whereas lists
+allow the storage of any data type. If you want to create a variable that stores multiple
+strings, in Python you need to create a list rather than an array.
+
+`importing array`
+
+from array import *
+This needs to be the first line of your program so that
+Python can use the array library.
+
+`for sorting`
+
+nums = sorted(nums)
+Sorts the array into
+ascending order.
+
+`new value`
+
+newValue = int(input(“Enter number: “))
+nums.append(newValue)
+Asks the user to enter a new number which it will add to
+the end of the existing array.
+
+`new array`
+
+newArray = array(‘i’,[])
+more = int(input(“How many items: ”))
+for y in range(0,more):
+newValue=int(input(“Enter num: ”))
+newArray.append(newValue)
+nums.extend(newArray)
+Creates a blank array called “newArray” which uses the
+integer data type. It asks the user how many items they
+want to add and then appends these new items to
+newArray. After all the items have been added it will join
+together the contents of newArray and the nums array.
+
+`display`
+
+for x in nums:
+print(x)
+Displays the array with
+each item appearing on
+a separate line.
+
+`number reverse`
+
+nums.reverse()
+Reverses the order of
+the array.
+
+`remove`
+
+1. getRid = int(input(“Enter item index: ”))
+nums.remove(getRid)
+Asks the user to enter the item they want to get rid of and then removes the first item
+that matches that value from the array.
+
+2. nums.pop()
+This will remove the last
+item from the array.
+
+`count`
+
+print(nums.count(45))
+This will display how many times the value “45” appears in the array.
