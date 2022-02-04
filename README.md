@@ -1,11 +1,18 @@
 # Python-Basic-Program-Challenge-Series
 In this series i cover each topics with various easy examples for every concept i create seprate file 
 
-#for basics
+## Note
+
+### Please use wrap text in all the .py files when you open it in VS Code if you want to avoid the unnecessary question following. 
+
+### For 2D graphics or turle graphics use Spyder IDE
+
+# basics
 Python is case sensitive so it is important that you use the correct case, otherwise
 your code will not work.
 Text values need to appear in speech marks (") but numbers do
 not.
+
 When naming variables (i.e. values that you want to store
 data in) you cannot use any dedicated words such as print,
 input, etc. otherwise your code will not work.
@@ -603,6 +610,256 @@ for letter in msg:
 print(letter,end=”*”)
 Displays the message, and between each character it will display a “*”.
 The output in this example will be: H*e*l*l*o*
+
+
+# Numeric Arrays
+
+Lists can store a jumble of different types
+of data at the same time, including strings and numbers. Python arrays are similar to
+lists, but they are only used to store numbers. Numbers can have varying ranges, but
+in an array all pieces of data in that array must have the same data type.
+
+`Integer`
+Whole number between -32,768 and 32,767 
+size = 2bytes
+
+`Long`
+Whole number between -2,147,483,648 and 2,147,483,647 
+size = 4bytes
+
+`Floating-point`
+Allows decimal places with numbers ranging
+from -1038 to 1038 (i.e. allows up to 38 numeric
+characters including a single decimal point
+anywhere in that number and can be negative or
+positive value)
+size = 4bytes
+
+`Double`
+Allows decimal places with numbers ranging
+from -10308 to 10308.
+size = 8bytes
+
+When you create your array you need to define the type of data it will contain. You cannot
+alter or change this while the program is running. Therefore, if you define an array as an 'i'
+type (this allows whole numbers between the values −32,768 and 32,767) you cannot add a
+decimal point to a number in that array later as it will cause an error message and crash the
+program.
+
+### Please note:
+Other programming languages use the term array to
+allow the storage of any data type, but in Python arrays only store numbers whereas lists
+allow the storage of any data type. If you want to create a variable that stores multiple
+strings, in Python you need to create a list rather than an array.
+
+`importing array`
+
+from array import *
+This needs to be the first line of your program so that
+Python can use the array library.
+
+`for sorting`
+
+nums = sorted(nums)
+Sorts the array into
+ascending order.
+
+`new value`
+
+newValue = int(input(“Enter number: “))
+nums.append(newValue)
+Asks the user to enter a new number which it will add to
+the end of the existing array.
+
+`new array`
+
+newArray = array(‘i’,[])
+more = int(input(“How many items: ”))
+for y in range(0,more):
+newValue=int(input(“Enter num: ”))
+newArray.append(newValue)
+nums.extend(newArray)
+Creates a blank array called “newArray” which uses the
+integer data type. It asks the user how many items they
+want to add and then appends these new items to
+newArray. After all the items have been added it will join
+together the contents of newArray and the nums array.
+
+`display`
+
+for x in nums:
+print(x)
+Displays the array with
+each item appearing on
+a separate line.
+
+`number reverse`
+
+nums.reverse()
+Reverses the order of
+the array.
+
+`remove`
+
+1. getRid = int(input(“Enter item index: ”))
+nums.remove(getRid)
+Asks the user to enter the item they want to get rid of and then removes the first item
+that matches that value from the array.
+
+2. nums.pop()
+This will remove the last
+item from the array.
+
+`count`
+
+print(nums.count(45))
+This will display how many times the value “45” appears in the array.
+
+# 2D Lists and Dictionaries
+
+Technically it is possible to create a two-dimensional array in Python, but as Python arrays
+are limited to storing numbers and most Python programmers feel more comfortable with
+working with lists, 2D arrays are rarely used and 2D lists are far more common.
+Imagine, for one terrifying moment, you are a teacher. Scary I know! Also
+imagine you have four students and you teach those same students across
+three different subjects. You may, if you are a conscientious teacher, need to
+keep records of those students’ grades for each of their subjects. It is possible to create a
+simple chart on paper to do this as follows:
+Maths English French
+Susan 45 37 54
+Peter 62 58 59
+Mark 49 47 60
+Andy 78 83 62
+
+### Logic we used in 2D_List_and_Dictionaries.py
+
+`simple_array = [[2,5,8],[3,7,4],[1,6,9]]`
+
+Creates a 2D list (as shown on the right) which uses
+standard Python indexing for the rows and columns.
+
+`print(simple_array)`
+
+Displays all the data in the 2D
+list.
+
+`print(simple_array[1])`
+
+Displays data from row 1, in this case
+[3, 7, 4].
+
+`print(simple_array[1][2])`
+
+Displays data from row 1, column 2, in
+this case 4.
+
+`simple_array[2][1]= 5`
+
+Changes the data in row 2,
+column 1 to the value 5.
+
+`simple_array[1].append(3)`
+
+Adds the value 3 onto the end of the data in
+row 1 so in this case it becomes [3, 7, 4, 3].
+
+`data_set = {“A”:{“x”:54,“y”:82,“z”:91},“B”:{“x”:75,“y”:29,“z”:80}}`
+
+Creates a 2D dictionary using user-defined labels for the rows and columns (as shown
+above).
+
+`print(data_set[“A”])`
+
+Displays data from data set “A”.
+
+`print(data_set[“B”][“y”])`
+
+Displays data from row “B”, column “y”.
+
+`grades[name]={“Maths”:mscore,“English”:escore}`
+
+Adds another row of data to a 2D dictionary. In this case, name would be the row index
+and Maths and English would be the column indexes.
+
+`for name in grades:
+print((name),grades[name][“English”])`
+
+Displays only the name and the English grade for each
+student.
+
+`for i in data_set:
+print(data_set [i][“y”])`
+
+Displays the “y” column from each row.
+del list[getRid]
+Removes a selected
+item.
+
+`data_set[“B”][“y”] = 53`
+
+Changes the data in “B”, “y”, to 53.
+
+
+# Reading and Writing to a Text File
+
+It is all very well being able to define a list, make changes and add new data, but if the next
+time the program is run it returns to the original data and your changes are lost then it is
+not a lot of use. Therefore, it is sometimes necessary to save data outside of the program
+and this way the data can be stored, along with any changes that are made.
+The easiest place to start learning about writing and reading from an external
+file is with a text file.
+When opening an external file you must specify how that file will be used within the
+program. The options are below.
+
+`Code - w`
+
+Write mode: used to create a new file. Any existing files
+with the same name will be erased and a new one
+created in its place.
+
+`Code - r`
+
+Read mode: used when an existing file is only being
+read and not being written to.
+
+`Code - a`
+
+Append mode: used to add new data to the end of the
+file.
+
+Text files are only used to write, read and append data. By the very nature of how they work
+it is not easy to remove or alter individual elements of data once it is written to the file,
+unless you want to overwrite the entire file or create a new file to store the new
+data. If you want to be able to alter the individual elements once the file has
+been created it is better to use a .csv file (see after some time) or an SQL database (see
+after some time).
+
+## Code we use here
+
+`file = open(“Countries.txt”,“w”)
+file.write(“Italy\n”)
+file.write(“Germany\n”)
+file.write(“Spain\n”)
+file.close()`
+
+Creates a file called “Countries.txt”. If one already exists then it will be overwritten with
+a new blank file. It will add three lines of data to the file (the \n forces a new line after
+each entry). It will then close the file, allowing the changes to the text file to be saved.
+
+`file = open(“Countries.txt”,“r”)
+print(file.read())`
+
+This will open the Countries.txt file in “read”
+mode and display the entire file.
+
+`file = open(“Countries.txt”,“a”)
+file.write(“France\n”)
+file.close()`
+
+This will open the Countries.txt file in “append”
+mode, add another line and then close the file.
+If the file.close() line is not included, the
+changes will not be saved to the text file.
 
 
 
