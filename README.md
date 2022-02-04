@@ -798,3 +798,68 @@ item.
 `data_set[“B”][“y”] = 53`
 
 Changes the data in “B”, “y”, to 53.
+
+
+# Reading and Writing to a Text File
+
+It is all very well being able to define a list, make changes and add new data, but if the next
+time the program is run it returns to the original data and your changes are lost then it is
+not a lot of use. Therefore, it is sometimes necessary to save data outside of the program
+and this way the data can be stored, along with any changes that are made.
+The easiest place to start learning about writing and reading from an external
+file is with a text file.
+When opening an external file you must specify how that file will be used within the
+program. The options are below.
+
+`Code - w`
+
+Write mode: used to create a new file. Any existing files
+with the same name will be erased and a new one
+created in its place.
+
+`Code - r`
+
+Read mode: used when an existing file is only being
+read and not being written to.
+
+`Code - a`
+
+Append mode: used to add new data to the end of the
+file.
+
+Text files are only used to write, read and append data. By the very nature of how they work
+it is not easy to remove or alter individual elements of data once it is written to the file,
+unless you want to overwrite the entire file or create a new file to store the new
+data. If you want to be able to alter the individual elements once the file has
+been created it is better to use a .csv file (see after some time) or an SQL database (see
+after some time).
+
+## Code we use here
+
+`file = open(“Countries.txt”,“w”)
+file.write(“Italy\n”)
+file.write(“Germany\n”)
+file.write(“Spain\n”)
+file.close()`
+
+Creates a file called “Countries.txt”. If one already exists then it will be overwritten with
+a new blank file. It will add three lines of data to the file (the \n forces a new line after
+each entry). It will then close the file, allowing the changes to the text file to be saved.
+
+`file = open(“Countries.txt”,“r”)
+print(file.read())`
+
+This will open the Countries.txt file in “read”
+mode and display the entire file.
+
+`file = open(“Countries.txt”,“a”)
+file.write(“France\n”)
+file.close()`
+
+This will open the Countries.txt file in “append”
+mode, add another line and then close the file.
+If the file.close() line is not included, the
+changes will not be saved to the text file.
+
+
+
