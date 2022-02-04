@@ -802,6 +802,8 @@ Changes the data in “B”, “y”, to 53.
 
 # Reading and Writing to a Text File
 
+### I create a seperate folder Textfile for storing this code and output text.
+
 It is all very well being able to define a list, make changes and add new data, but if the next
 time the program is run it returns to the original data and your changes are lost then it is
 not a lot of use. Therefore, it is sometimes necessary to save data outside of the program
