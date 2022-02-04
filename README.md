@@ -5,6 +5,8 @@ In this series i cover each topics with various easy examples for every concept 
 
 ### Please use wrap text in all the .py files when you open it in VS Code if you want to avoid the unnecessary question following. 
 
+### For 2D graphics or turle graphics use Spyder IDE
+
 # basics
 Python is case sensitive so it is important that you use the correct case, otherwise
 your code will not work.
@@ -712,3 +714,87 @@ item from the array.
 
 print(nums.count(45))
 This will display how many times the value “45” appears in the array.
+
+# 2D Lists and Dictionaries
+
+Technically it is possible to create a two-dimensional array in Python, but as Python arrays
+are limited to storing numbers and most Python programmers feel more comfortable with
+working with lists, 2D arrays are rarely used and 2D lists are far more common.
+Imagine, for one terrifying moment, you are a teacher. Scary I know! Also
+imagine you have four students and you teach those same students across
+three different subjects. You may, if you are a conscientious teacher, need to
+keep records of those students’ grades for each of their subjects. It is possible to create a
+simple chart on paper to do this as follows:
+Maths English French
+Susan 45 37 54
+Peter 62 58 59
+Mark 49 47 60
+Andy 78 83 62
+
+### Logic we used in 2D_List_and_Dictionaries.py
+
+`simple_array = [[2,5,8],[3,7,4],[1,6,9]]`
+
+Creates a 2D list (as shown on the right) which uses
+standard Python indexing for the rows and columns.
+
+`print(simple_array)`
+
+Displays all the data in the 2D
+list.
+
+`print(simple_array[1])`
+
+Displays data from row 1, in this case
+[3, 7, 4].
+
+`print(simple_array[1][2])`
+
+Displays data from row 1, column 2, in
+this case 4.
+
+`simple_array[2][1]= 5`
+
+Changes the data in row 2,
+column 1 to the value 5.
+
+`simple_array[1].append(3)`
+
+Adds the value 3 onto the end of the data in
+row 1 so in this case it becomes [3, 7, 4, 3].
+
+`data_set = {“A”:{“x”:54,“y”:82,“z”:91},“B”:{“x”:75,“y”:29,“z”:80}}`
+
+Creates a 2D dictionary using user-defined labels for the rows and columns (as shown
+above).
+
+`print(data_set[“A”])`
+
+Displays data from data set “A”.
+
+`print(data_set[“B”][“y”])`
+
+Displays data from row “B”, column “y”.
+
+`grades[name]={“Maths”:mscore,“English”:escore}`
+
+Adds another row of data to a 2D dictionary. In this case, name would be the row index
+and Maths and English would be the column indexes.
+
+`for name in grades:
+print((name),grades[name][“English”])`
+
+Displays only the name and the English grade for each
+student.
+
+`for i in data_set:
+print(data_set [i][“y”])`
+
+Displays the “y” column from each row.
+del list[getRid]
+Removes a selected
+item.
+
+`data_set[“B”][“y”] = 53`
+
+Changes the data in “B”, “y”, to 53.
