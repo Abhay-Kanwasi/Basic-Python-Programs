@@ -1,5 +1,0 @@
-Python
-R
-Ruby
-Secrate doc.
-Software
