@@ -1,7 +1,6 @@
 # We have to import .csv file every time so we import it here So, use it in every code.
 
 import csv
-from tracemalloc import start
 
 # # 111 Create .csv file that will store the data of some books, book authors and the year book was released.
 
