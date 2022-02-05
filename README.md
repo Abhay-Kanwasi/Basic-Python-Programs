@@ -910,6 +910,8 @@ Python to use the
 .csv library of
 commands.
 
+
+
 `file = open (“Stars.csv”,“w”)
 newRecord = “Brian,73,Taurus\n”
 file.write(str(newRecord))
@@ -918,6 +920,8 @@ file.close()`
 This will create a new file called “Stars.csv”, overwriting any
 previous files of the same name. It will add a new record and
 then close and save the changes to the file.
+
+
 
 `file = open (“Stars.csv”,“a”)
 name = input(“Enter name: ”)
@@ -930,6 +934,8 @@ file.close()`
 This will open the Stars.csv file, ask the user to enter the name, age
 and star sign, and will append this to the end of the file.
 
+
+
 `file = open(“Stars.csv”,“r”)
 for row in file:
 print(row)`
@@ -937,6 +943,8 @@ print(row)`
 This will open the Stars.csv file in read
 mode and display the records one row at
 a time.
+
+
 
 `file = open(“Stars.csv”,“r”)
 reader = csv.reader(file)
@@ -946,6 +954,8 @@ print(rows[1])`
 This will open the Stars.csv file and
 display only row 1. Remember, Python
 starts counting from 0.
+
+
 
 `file = open (“Stars.csv”,“r”)
 search = input(“Enter the data you are searching for: ”)
@@ -957,6 +967,8 @@ print(row)`
 Asks the user to enter the data they are searching for. It will display all rows that contain
 that data anywhere in that row.
 
+
+
 `import csv
 file = list(csv.reader(open(“Stars.csv”)))
 tmp = []
@@ -966,6 +978,8 @@ tmp.append(row)`
 A .csv file cannot be altered, only added to. If you need to alter the file you need to
 write it to a temporary list. This block of code will read the original .csv file and write it
 to a list called “tmp”. This can then be used and altered as a list.
+
+
 
 `file = open(“NewStars.csv”,“w”)
 x = 0
