@@ -7,7 +7,7 @@ In this series i cover each topics with various easy examples for every concept 
 
 ### For 2D graphics or turle graphics use Spyder IDE
 
-# basics
+#1. Basics
 Python is case sensitive so it is important that you use the correct case, otherwise
 your code will not work.
 Text values need to appear in speech marks (") but numbers do
@@ -79,7 +79,7 @@ used in calculations but variables stored as text cannot.
 
 
 
-# for if else
+#2. If and Else
 
 I created ' if_else.py ' 
 In this we see "If statement allow your program to make decision and change the route that is taken through
@@ -96,7 +96,7 @@ In this i also cover basic concept of #Comparison_Operators
    and          Both conditions must be met
    or          Either conditions must be met
 
-# for strings
+#3. Strings
 
 I created 'Strings.py'
 String is the technical name for text. To define a block of code as a string, you need to
@@ -152,7 +152,7 @@ the value of positions 7, 8 and 9 ,which is
 name = firstname+surname
 
 
-# for math
+#4. Math
 ###I created math.py
 Python can perform several mathematical functions, but these are only available when the
 data is treated as either an integer (a whole number) or a floating-point (a
@@ -201,7 +201,7 @@ x % y
 Finds the remainder (e.g. 15%2 gives
 the answer 1).
 
-# for loop
+#5. For loop
 I created loops.py
 A for loop allows Python to keep repeating code a set number of times. It is sometimes
 known as a counting loop because you know the number of times the loop will run
@@ -239,7 +239,7 @@ This range will subtract 3 from i each
 time. The output will be: 10, 7, 4
 for i
 
-# while loop
+#6 While loop
 
 A while loop allows code to be repeated an unknown number of times
 as long as a condition is being met. This may be 100 times, just the once or
@@ -250,7 +250,7 @@ conditions are in place to run the loop before it starts.
 
 I created while_loop.py to cover it
 
-# random
+#7. Random
 
 Python can generate random values. In reality, the values are not
 completely random as no computer can cope with that; instead it uses an
@@ -303,7 +303,7 @@ Picks a random value from the options “red”, “black” or “green” and 
 variable “colour”. Remember: strings need to include speech marks but numeric data
 does not.
 
-# Turtle Graphics
+#8. Turtle Graphics
 For this I created turtle.py
 
 It is possible to draw using a turtle in Python. By typing in commands
@@ -408,7 +408,7 @@ example will make the shape have a black outline
 and a red fill. This needs to be entered before the
 shape is drawn.
 
-# Dictionaries
+#9. Dictionaries
 
 So far, we have used variables that can store a single item of data in them. When you used
 the random.choice([“red”,“blue”,“green”]) line of code you are picking a
@@ -576,9 +576,10 @@ first instance.
 Adds the number 993 to the end of the list.
 
 
-# String Manipulation
+#10. String Manipulation
 
-Explanation
+**Explanation
+
 A string is the technical name for a group of characters that you do not need to perform
 calculations with. “Hello” would be an example of a string, as would “7B”.
 Here we have a variable called name which is assigned the value “Simon”.
@@ -612,7 +613,7 @@ Displays the message, and between each character it will display a “*”.
 The output in this example will be: H*e*l*l*o*
 
 
-# Numeric Arrays
+#11. Numeric Arrays
 
 Lists can store a jumble of different types
 of data at the same time, including strings and numbers. Python arrays are similar to
@@ -715,7 +716,7 @@ item from the array.
 print(nums.count(45))
 This will display how many times the value “45” appears in the array.
 
-# 2D Lists and Dictionaries
+#12. 2D Lists and Dictionaries
 
 Technically it is possible to create a two-dimensional array in Python, but as Python arrays
 are limited to storing numbers and most Python programmers feel more comfortable with
@@ -800,7 +801,7 @@ item.
 Changes the data in “B”, “y”, to 53.
 
 
-# Reading and Writing to a Text File
+#13. Reading and Writing to a Text File
 
 ### I create a seperate folder Textfile for storing this code and output text.
 
@@ -864,7 +865,7 @@ If the file.close() line is not included, the
 changes will not be saved to the text file.
 
 
-# Reading and Writing to a .csv File
+#14. Reading and Writing to a .csv File
 
 CSV stands for Comma Separated Values and is a format usually associated with importing
 and exporting from spreadsheets and databases. It allows greater control over the data
@@ -992,7 +993,7 @@ file.close()`
 Writes from a list into a new .csv file called “NewStars.csv”.
 
 
-# Subprograms
+#15. Subprograms
 
 Subprograms are blocks of code which perform specific
 tasks and can be called upon at any time in the program to
