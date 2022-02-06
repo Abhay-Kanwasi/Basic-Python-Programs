@@ -990,3 +990,139 @@ x = x + 1
 file.close()`
 
 Writes from a list into a new .csv file called “NewStars.csv”.
+
+
+# Subprograms
+
+Subprograms are blocks of code which perform specific
+tasks and can be called upon at any time in the program to
+run that code.
+
+**Advantages
+
+1. You can write a block of code and it can be used and reused
+at different times during the program.
+
+2. It makes the program simpler to understand as the code
+is grouped together into chunks.
+
+
+**Defining a subprogram and passing variables between subprograms
+
+Below is a simple program that we would normally create
+without subprograms but have written it with subprograms
+so you can see how they work:
+
+`def get_name():
+ user_name = input("Enter your name :")
+ return user_name
+ 
+def print_Msg(user_name) :
+ print("Hello", user_name)
+ 
+def main()
+ user_name = get_name()
+ print_Msg(user_name)
+
+main()`
+
+**Explanation of this whole program : 
+
+This program uses three subprograms get_name(), print_Msg() and main().
+The get_name() subprogram will ask the user to input their name and then it will return
+the value of the variable “user_name” so that it can be used in another subprogram. This is
+very important. If you do not return the values, then the values of any variables that were
+created or altered in that subprogram cannot be used elsewhere in your program.
+
+The variable “user_name” appears in the brackets as the current value of the variable is
+being imported into the subprogram so it can be used.
+The main() subprogram will get the user_name from the get_name() subprogram
+(using the variable user_name) as this was returned from the get_name() subprogram. It
+will then use that user_name variable in the print_Msg() subprogram.
+The last line “main()” is the actual program itself. All this will do is start the main()
+subprogram running.
+Obviously, there is no need to create such a convoluted way of performing what is in fact a
+very simple program, but this is only used as an example of how subprograms are laid out
+and variables can be used and passed between the subprograms.
+
+**Please note:
+
+Python does not like surprises, so if you are going
+to use a subprogram in a program, Python must have read the
+“def subprogram_name()” line before so it knows where to
+go to find it. If you try to refer to a subprogram before Python has
+read about it, it panics and will crash. When calling a
+subprogram, the subprogram must be written above the section
+of code you use to call it. Python will read from the top down and run the first line it comes
+across that has not been indented and does not start with the word def. In the program
+above this would be main().
+
+## Code we used on subprogram.py with explanation.
+
+`Code 1`
+
+def get_data():
+user_name = input(“Enter your name: ”)
+user_age = int(input(“Enter your age: ”))
+data_tuple = (user_name, user_age)
+return data_tuple
+
+**Explanation
+
+Defines a subprogram called “get_data()” which will ask the user for their name and
+age. As we want to send more than one piece of data back to the main program for other
+parts of the program to use, we have combined them together. The return line can only
+return a single value, which is why we combined the user_name and user_age variables
+into a tuple (see page 58) called data_tuple.
+
+`Code 2`
+
+def message(user_name,user_age):
+if user_age <= 10:
+print(“Hi”, user_name)
+else:
+print(“Hello”, user_name)
+
+**Explanation
+
+Defines a subprogram called message() which uses two variables that have previously
+been defined (user_name and user_age).
+
+`Code 3`
+
+def main():
+user_name,user_age = get_data()
+message(user_name,user_age)
+
+**Explanation
+
+Defines a subprogram called main() which obtains the
+two variables from the get_data() subprogram. These
+must be labelled in the same order as they were
+defined in the tuple. It then calls the message()
+subprogram to run with the two variables.
+
+`Code 4`
+
+main()
+
+**Explanation
+
+Runs the main() subprogram.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
