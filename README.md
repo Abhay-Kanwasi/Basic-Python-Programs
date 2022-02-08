@@ -1124,10 +1124,12 @@ allows you to do this.
 ### Code we used in tkinterGUI.py
 
 `Code 1`
+
 from tkinter import *
 This line must go at the beginning of the program to import the Tkinter library.
 
 `Code 2`
+
 window = Tk()
 window.title(“Window Title”)
 window.geometry(“450x100”)
@@ -1136,76 +1138,91 @@ display, referred to as “window”, adds a title
 and defines the size of the window.
 
 `Code 3`
+
 label = Label(text = “Enter number:”)
 Adds text to the screen displaying the message
 shown.
 
 `Code 4`
+
 entry_box = Entry (text = 0)
 Creates a blank entry box. Entry boxes can be used by
 the user to input data or used to display output.
 
 `Code 5`
+
 output_box = Message(text = 0)
 Creates a message box which is used to display an
 output.
 
 `Code 6`
+
 list_box = Listbox()
 Creates a drop-down list box
 which can only contain strings.
 
 `Code 7`
+
 button1 = Button(text = “Click here”, command = click)
 Creates a button that will run the subprogram “click”.
 
 `Code 8`
+
 output_box [“bg”] = “red”
 Specifies the background colour of the
 object.
 
 `Code 9`
+
 output_box [“fg”] = “white”
 Specifies the font colour of the object.
 
 `Code 10`
+
 output_box [“relief”] = “sunken”
 Specifies the style of the box. This can be flat,
 raised, sunken, grooved and ridged.
 
 `Code 11`
+
 entry_box [“justify”] = “center”
 Specifies the justification of the text in an entry box,
 but this does not work for message boxes.
 
 `Code 12`
+
 label.place(x = 50, y = 20, width = 100, height = 25)
 Specifies the position in which the object will appear in the window. If the position is
 not specified the item will not appear in the window.
 
 `Code 13`
+
 entry_box.delete(0, END)
 Deletes the contents of an entry or
 list box.
 
 `Code 14`
+
 num = entry_box.get()
 Saves the contents of an entry box and stores it
 in a variable called num. This does not work
 with message boxes.
 
 `Code 15`
+
 answer = output_txt[“text”]
 Obtains the contents of a message box and
 stores it in a variable called answer. This does
 not work with an entry box.
 
 `Code 16`
+
 output_txt[“text”] = total
 Changes the content of a message box to
 display the value of the variable total.
 
 `Code 17`
+
 window.mainloop()
 This must be at the end of the program to make
 sure it keeps working.
