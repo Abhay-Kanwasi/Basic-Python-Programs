@@ -7,7 +7,7 @@ In this series i cover each topics with various easy examples for every concept 
 
 ### For 2D graphics or turle graphics use Spyder IDE
 
-# basics
+# 1. Basics
 Python is case sensitive so it is important that you use the correct case, otherwise
 your code will not work.
 Text values need to appear in speech marks (") but numbers do
@@ -79,7 +79,7 @@ used in calculations but variables stored as text cannot.
 
 
 
-# for if else
+# 2. If and Else
 
 I created ' if_else.py ' 
 In this we see "If statement allow your program to make decision and change the route that is taken through
@@ -96,7 +96,7 @@ In this i also cover basic concept of #Comparison_Operators
    and          Both conditions must be met
    or          Either conditions must be met
 
-# for strings
+# 3. Strings
 
 I created 'Strings.py'
 String is the technical name for text. To define a block of code as a string, you need to
@@ -152,7 +152,7 @@ the value of positions 7, 8 and 9 ,which is
 name = firstname+surname
 
 
-# for math
+# 4. Math
 ###I created math.py
 Python can perform several mathematical functions, but these are only available when the
 data is treated as either an integer (a whole number) or a floating-point (a
@@ -201,7 +201,7 @@ x % y
 Finds the remainder (e.g. 15%2 gives
 the answer 1).
 
-# for loop
+# 5. For loop
 I created loops.py
 A for loop allows Python to keep repeating code a set number of times. It is sometimes
 known as a counting loop because you know the number of times the loop will run
@@ -239,7 +239,7 @@ This range will subtract 3 from i each
 time. The output will be: 10, 7, 4
 for i
 
-# while loop
+# 6 While loop
 
 A while loop allows code to be repeated an unknown number of times
 as long as a condition is being met. This may be 100 times, just the once or
@@ -250,7 +250,7 @@ conditions are in place to run the loop before it starts.
 
 I created while_loop.py to cover it
 
-# random
+# 7. Random
 
 Python can generate random values. In reality, the values are not
 completely random as no computer can cope with that; instead it uses an
@@ -303,7 +303,7 @@ Picks a random value from the options “red”, “black” or “green” and 
 variable “colour”. Remember: strings need to include speech marks but numeric data
 does not.
 
-# Turtle Graphics
+# 8. Turtle Graphics
 For this I created turtle.py
 
 It is possible to draw using a turtle in Python. By typing in commands
@@ -408,7 +408,7 @@ example will make the shape have a black outline
 and a red fill. This needs to be entered before the
 shape is drawn.
 
-# Dictionaries
+# 9. Dictionaries
 
 So far, we have used variables that can store a single item of data in them. When you used
 the random.choice([“red”,“blue”,“green”]) line of code you are picking a
@@ -576,9 +576,10 @@ first instance.
 Adds the number 993 to the end of the list.
 
 
-# String Manipulation
+# 10. String Manipulation
 
-Explanation
+**Explanation
+
 A string is the technical name for a group of characters that you do not need to perform
 calculations with. “Hello” would be an example of a string, as would “7B”.
 Here we have a variable called name which is assigned the value “Simon”.
@@ -612,7 +613,7 @@ Displays the message, and between each character it will display a “*”.
 The output in this example will be: H*e*l*l*o*
 
 
-# Numeric Arrays
+# 11. Numeric Arrays
 
 Lists can store a jumble of different types
 of data at the same time, including strings and numbers. Python arrays are similar to
@@ -715,7 +716,7 @@ item from the array.
 print(nums.count(45))
 This will display how many times the value “45” appears in the array.
 
-# 2D Lists and Dictionaries
+# 12. 2D Lists and Dictionaries
 
 Technically it is possible to create a two-dimensional array in Python, but as Python arrays
 are limited to storing numbers and most Python programmers feel more comfortable with
@@ -800,7 +801,7 @@ item.
 Changes the data in “B”, “y”, to 53.
 
 
-# Reading and Writing to a Text File
+# 13. Reading and Writing to a Text File
 
 ### I create a seperate folder Textfile for storing this code and output text.
 
@@ -864,7 +865,7 @@ If the file.close() line is not included, the
 changes will not be saved to the text file.
 
 
-# Reading and Writing to a .csv File
+# 14. Reading and Writing to a .csv File
 
 CSV stands for Comma Separated Values and is a format usually associated with importing
 and exporting from spreadsheets and databases. It allows greater control over the data
@@ -990,3 +991,139 @@ x = x + 1
 file.close()`
 
 Writes from a list into a new .csv file called “NewStars.csv”.
+
+
+# 15. Subprograms
+
+Subprograms are blocks of code which perform specific
+tasks and can be called upon at any time in the program to
+run that code.
+
+**Advantages
+
+1. You can write a block of code and it can be used and reused
+at different times during the program.
+
+2. It makes the program simpler to understand as the code
+is grouped together into chunks.
+
+
+**Defining a subprogram and passing variables between subprograms
+
+Below is a simple program that we would normally create
+without subprograms but have written it with subprograms
+so you can see how they work:
+
+`def get_name():
+ user_name = input("Enter your name :")
+ return user_name
+ 
+def print_Msg(user_name) :
+ print("Hello", user_name)
+ 
+def main()
+ user_name = get_name()
+ print_Msg(user_name)
+
+main()`
+
+**Explanation of this whole program : 
+
+This program uses three subprograms get_name(), print_Msg() and main().
+The get_name() subprogram will ask the user to input their name and then it will return
+the value of the variable “user_name” so that it can be used in another subprogram. This is
+very important. If you do not return the values, then the values of any variables that were
+created or altered in that subprogram cannot be used elsewhere in your program.
+
+The variable “user_name” appears in the brackets as the current value of the variable is
+being imported into the subprogram so it can be used.
+The main() subprogram will get the user_name from the get_name() subprogram
+(using the variable user_name) as this was returned from the get_name() subprogram. It
+will then use that user_name variable in the print_Msg() subprogram.
+The last line “main()” is the actual program itself. All this will do is start the main()
+subprogram running.
+Obviously, there is no need to create such a convoluted way of performing what is in fact a
+very simple program, but this is only used as an example of how subprograms are laid out
+and variables can be used and passed between the subprograms.
+
+**Please note:
+
+Python does not like surprises, so if you are going
+to use a subprogram in a program, Python must have read the
+“def subprogram_name()” line before so it knows where to
+go to find it. If you try to refer to a subprogram before Python has
+read about it, it panics and will crash. When calling a
+subprogram, the subprogram must be written above the section
+of code you use to call it. Python will read from the top down and run the first line it comes
+across that has not been indented and does not start with the word def. In the program
+above this would be main().
+
+## Code we used on subprogram.py with explanation.
+
+`Code 1`
+
+def get_data():
+user_name = input(“Enter your name: ”)
+user_age = int(input(“Enter your age: ”))
+data_tuple = (user_name, user_age)
+return data_tuple
+
+**Explanation
+
+Defines a subprogram called “get_data()” which will ask the user for their name and
+age. As we want to send more than one piece of data back to the main program for other
+parts of the program to use, we have combined them together. The return line can only
+return a single value, which is why we combined the user_name and user_age variables
+into a tuple (see page 58) called data_tuple.
+
+`Code 2`
+
+def message(user_name,user_age):
+if user_age <= 10:
+print(“Hi”, user_name)
+else:
+print(“Hello”, user_name)
+
+**Explanation
+
+Defines a subprogram called message() which uses two variables that have previously
+been defined (user_name and user_age).
+
+`Code 3`
+
+def main():
+user_name,user_age = get_data()
+message(user_name,user_age)
+
+**Explanation
+
+Defines a subprogram called main() which obtains the
+two variables from the get_data() subprogram. These
+must be labelled in the same order as they were
+defined in the tuple. It then calls the message()
+subprogram to run with the two variables.
+
+`Code 4`
+
+main()
+
+**Explanation
+
+Runs the main() subprogram.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
