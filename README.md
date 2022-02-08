@@ -1107,7 +1107,7 @@ subprogram to run with the two variables.
 
 main()
 
-**Explanation
+** Explanation
 
 Runs the main() subprogram.
 
