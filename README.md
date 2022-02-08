@@ -1113,7 +1113,7 @@ Runs the main() subprogram.
 
 
 
-# 16 Tkinter GUI
+# 16. Tkinter GUI
 
 
 A GUI (graphical user interface) makes the program easier to use. It allows you, as the
@@ -1244,12 +1244,98 @@ window.mainloop()
 This must be at the end of the program to make
 sure it keeps working.
 
+# 17. More Tkinter
+
+Here we will look at creating a GUI which includes more features and builds on the
+knowledge from the previous chapter.
+
+All the code to create this window can be created using the code we looked at in the
+previous section and the example code you will be looking at in this chapter.
+When using images in your program, it is easier if they are stored in the same folder as the
+program. Otherwise you need to include the entire dictionary location of the file.
 
 
+** Please note: **
+
+it is only possible to use GIF or PGM/PPM file types for images in Tkinter as
+other file types are not supported. Make sure your images are saved in a suitable format
+and with a suitable name in the correct location before you start creating the programs, if at
+all possible, to make your life simpler.
+
+### Code we used in tkinterGUI2.py
+
+`Code 1`
+
+window.wm_iconbitmap(“MyIcon.ico”)
+
+Changes the icon displayed in the title of the window.
+
+`Code 2`
+
+window.configure(background = “light green”)
+
+Changes the background colour of the window, in this case to light green.
+
+`Code 3`
+
+logo = PhotoImage(file = “logo.gif”)
+logoimage = Label(image = logo)
+logoimage.place(x = 30, y = 20, width = 200, height = 120)
+
+Displays an image in a label widget. This image will not change while the program is
+running.
+
+`Code 4`
+
+photo = PhotoImage(file = “logo.gif”)
+photobox = Label(window, image = photo)
+photobox.image = photo
+photobox.place(x = 30, y = 20, width = 200, height = 120)
+
+This is similar to the block above but as we want the image to change as we update the
+data we need to add the code photobox.image = photo, which makes it
+updatable.
+
+`Code 5`
+
+selectName = StringVar(window)
+selectName.set(“Select Name”)
+namesList = OptionMenu(window,selectName,“Bob”,“Sue”,“Tim”)
+namesList.place(x = 30, y = 250)
+
+Creates a variable called selectName which will store a string where the original
+value of the variable is “Select Name”. It will then create a drop-down option menu
+which stores the value the user selects in the selectName variable and displays the
+values in the list: Bob, Sue and Tim.
 
 
+`Example :-`
 
+def clicked():
+sel = selectName.get()
+mesg = “Hello “ + sel
+mlabel[“text”] = mesg
+if sel == “Bob”:
+photo = PhotoImage(file = “Bob.gif”)
+photobox.image = photo
+elif sel == “Sue”:
+photo = PhotoImage(file = “Sue.gif”)
+photobox.image = photo
+elif sel == “Tim”:
+photo = PhotoImage(file = “Tim.gif”)
+photobox.image = photo
+else:
+photo = PhotoImage(file = “logo.gif”)
+photobox.image = photo
+photobox[“image”] = photo
+photobox.update()
 
+**Explanation**
 
+In this example, when a button is clicked it will run the “clicked” subprogram. This will
+obtain the value from the selectName variable and create a message that will be
+displayed in a label. It will then check to see which option has been selected and
+change the picture to the correct image, which is displayed in the photo variable. If no
+name is selected it will simply show the logo.
 
 
